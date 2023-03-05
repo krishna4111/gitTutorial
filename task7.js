@@ -105,3 +105,33 @@ itemList.previousElementSibling.style.color='green';
  var container=document.querySelector('header .container');
  var h1=document.querySelector('header h1')
  container.insertBefore(newDiv,h1);
+
+
+ //creating a element and add it to your wished places
+ //1. creating a element(div element)
+ var element=document.createElement('div');
+ var newDivText=document.createTextNode('Hello World');
+ element.appendChild(newDivText)
+
+ //2.push our created element to head or body
+ //our pushed element is defaultly added after our script tag
+ document.body.appendChild(element);
+ console.log(document.body);
+ //3.take a target place where you have to insert
+ var target=document.getElementById('main-header');
+ console.log(target)
+ document.body.insertBefore(element,target);
+ console.log(document.body);
+
+
+ var element=document.createElement('div');
+ var newDivText=document.createTextNode('Hello World');
+ element.appendChild(newDivText)
+
+ document.body.appendChild(element);
+ console.log(document.body);
+
+  var target=document.getElementsByClassName('container')[1].getElementsByClassName('list-group-item');
+ console.log(target)
+ document.body.insertBefore(element,target);
+ console.log(document.body);
